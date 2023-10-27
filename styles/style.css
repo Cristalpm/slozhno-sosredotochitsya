@@ -8,30 +8,15 @@
   font-size: 18px;
   background: var(--cover-image) no-repeat top center,
   var(--accent-clr-with-background);
-  background-size: auto 2000px;
-  background-position: top;
-}
-
-
-@media (min-width:374px) {
-  .page {
-    background-size: auto 668px;
-  }
+  background-size: 100vw 100vh;
+  background-attachment: fixed
 }
 
 @media (min-width:768px) {
   .page {
     padding:20px;
-    background-size: auto 1024px;
   }
 }
-
-@media (min-width:1024px) {
-  .page {
-    background-size: auto 768px;
-  }
-}
-
 
 /*header*/
 .header {
@@ -159,19 +144,26 @@
 
 .header__heading {
   align-self: self-start;
-  margin: 15px 0 0;
+  margin: 15px 0 0 -20px;
   text-shadow: 4px 4px 0 var(--accent-clr);
 }
 
+
+@media (max-width: 767px)  {
+  .header__heading {
+    margin-left: 0;
+  }
+} 
+
 @media (min-width: 768px) {
   .header__heading {
-    margin: 20px 0 0 -20px;
+    margin-top: 20px;
   }
 }
 
 @media (min-width: 1024px) {
   .header__heading {
-    margin: 45px 0 0 -20px;
+    margin-top: 45px;
   }
 }
 
@@ -378,6 +370,18 @@
 .accented-link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-clr);
+}
+
+.accented-link:hover {
+  text-decoration: underline;
+}
+
+.accented-link:focus {
+  outline: 0;
+}
+
+.accented-link:focus-visible {
+  outline: 1px solid currentColor;
 }
 
 .paragraph-text {
